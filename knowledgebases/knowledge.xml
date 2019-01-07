@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<knowledge>
+	<title>Brandveiligheid</title>
+	<description>Welke voorzieningen moeten er aanwezig zijn?</description>
+
+	<rule>
+		<description>De regels zijn van toepassing</description>
+		<if>
+			<and>
+				<fact name="is_gebouw">yes</fact>
+				<fact name="heeft_brandcompartiment">yes</fact>
+			</and>
+		</if>
+		<then>
+			<fact name="regels_van_toepassing">yes</fact>
+		</then>
+	</rule>
+
+	<rule>
+		<description>Het gaat om een gebouw</description>
+		<if>
+			<or>
+				<fact name="gebruiksfunctie">woonfunctie</fact>
+				<fact name="gebruiksfunctie">industriefunctie</fact>
+				<fact name="gebruiksfunctie">kantoorfunctie</fact>
+				<fact name="gebruiksfunctie">winkelfunctie</fact>
+			</or>
+		</if>
+		<then>
+			<fact name="is_gebouw">yes</fact>
+		</then>
+	</rule>
+
+	<question>
+		<description>Heeft de bouwconstructie een brandcompartiment?</description>
+		<option>
+			<description>De bouwconstructie heeft een brandcompartiment</description>
+			<then>
+				<fact name="heeft_brandcompartiment">yes</fact>
+			</then>
+		</option>
+		<option>
+			<description>De bouwgconstructie heeft geen brandcompartiment</description>
+			<then>
+				<fact name="heeft_brandcompartiment">no</fact>
+			</then>
+		</option>
+	</question>
+
+	<question>
+		<description>Wat zijn de gebruiksfuncties voor het gebouw?</description>
+		<option>
+			<description><![CDATA[Woonfunctie zoals beschreven in <a href="#">NEN1234</a>]]></description>
+			<then>
+				<fact name="gebruiksfunctie">woonfunctie</fact>
+			</then>
+		</option>
+		<option>
+			<description>Bijeenkomstfunctie</description>
+			<then>
+				<fact name="gebruiksfunctie">bijeenkomstfunctie</fact>
+			</then>
+		</option>
+		<option>
+			<description>Industriefunctie</description>
+			<then>
+				<fact name="gebruiksfunctie">industriefunctie</fact>
+			</then>
+		</option>
+		<option>
+			<description>Kantoorfunctie</description>
+			<then>
+				<fact name="gebruiksfunctie">kantoorfunctie</fact>
+			</then>
+		</option>
+		<option>
+			<description>Winkelfunctie</description>
+			<then>
+				<fact name="gebruiksfunctie">winkelfunctie</fact>
+			</then>
+		</option>
+	</question>
+
+	<goal name="regels_van_toepassing">
+		<description>Zijn de regels van toepassing?</description>
+		<answer value="yes">Ja, de regels zijn van toepassing.</answer>
+		<answer value="no">Nee, deze situatie is niet specifiek beschreven in de regelgeving.</answer>
+		<answer value="undefined">Geen idee</answer>
+	</goal>
+</knowledge>
