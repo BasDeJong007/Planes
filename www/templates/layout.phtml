@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><?=$this->html($domain->title) ?></title>
+		<link rel="stylesheet" href="webfrontend.css">
+	</head>
+	<body id="webfrontend">
+		<nav class="site-nav">
+			<a href="<?=$this->attr($_SERVER['REQUEST_URI'])?>">Start over</a>
+			<a href="analyse.php?kb=<?=rawurlencode($_GET['kb'])?>">Analyse</a>
+			<a href="index.php">Upload</a>
+			<a href="#debug">Debug</a>
+		</nav>
+		<header>
+			<h1><?=$this->html($domain->title)?></h1>
+			<p><?=$domain->description?></p>
+		</header>
+		<div>
+			<form method="post">
+				<input type="hidden" name="state" value="<?=_encode($state) ?>">
+				<input type="hidden" name="log" value="<?=_encode($log) ?>">
+				<?=$content?>
+			</form>
+		</div>
+		<aside id="debug-info">
+			<section class="state-info fact-state">
+				<h3>Facts</h3>
+				<dl>
+					<?php foreach($state->facts as $name => $value): ?>
+					<dt><?=$name?></dt>
+					<dd>
+						<?=$this->html($value)?>
+						<?php if (KnowledgeState::is_variable($value) && $state->resolve($value) != $value): ?>
+							<small><?=$this->html($state->resolve($value)) ?></small>
+						<?php endif ?>
+					</dd>
+					<?php endforeach ?>
+				</dl>
+			</section>
+			
+			<section class="state-info goal-stack">
+				<h3>Goal stack</h3>
+				<ol>
+					<?php foreach ($state->goalStack as $goal): ?>
+					<li><?=$goal?></li>
+					<?php endforeach ?>
+				</ol>
+			</section>
+			
+			<section class="state-info rule-state">
+				<h3>Rules</h3>
+				<?php $formatter = new HTMLFormatter($state); ?>
+				<ul>
+					<?php foreach($domain->rules as $rule): ?>
+					<li><?=$formatter->formatRule($rule)?></li>
+					<?php endforeach ?>
+				</ul>
+			</section>
+
+			<section class="state-info log">
+				<h3>Step by step</h3>
+				<select id="log-level-selector">
+					<option value="<?=LOG_LEVEL_WARNING?>">Warnings only</option>
+					<option value="<?=LOG_LEVEL_INFO?>">Useful</option>
+					<option value="<?=LOG_LEVEL_VERBOSE?>">Everything</option>
+				</select>
+				<ol>
+				<?php foreach($log->messages as $step_i => $step): ?>
+					<li>Step <?=$step_i?></li>
+					<ol>
+					<?php foreach ($step as list($level, $message)): ?>
+						<li class="log-level-<?=$level?>">
+							<?=$message?>
+						</li>
+					<?php endforeach ?>
+					</ol>
+				<?php endforeach ?>
+				</ol>
+			</section>
+		</aside>
+
+		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script>
+		/* when clicking on an item, select the accompanying radio-button
+		and submit the form. Unless the user clicks on a link. */
+		$('.question > .options > li')
+			.addClass('single-click')
+			.click(function(e) {
+				if (e.target.nodeName == 'A')
+					return;
+
+				var radio = $(this).find('input[type=radio]');
+				radio.prop('checked', true);
+				e.preventDefault();
+				radio.get(0).form.submit();
+			});
+		
+		$('.question button[type=submit]').hide();
+
+		var panel = $('#debug-info');
+
+		var grippy = $('<div>').addClass('grippy').appendTo(panel);
+
+		var delta = 15;
+
+		function updateDebugPanelVisibility() {
+			$(document.body).toggleClass('show-debug-info', !!parseInt(localStorage.debug));
+
+			if (localStorage.debugPanelWidth)
+				panel.css('width', localStorage.debugPanelWidth);
+		}
+
+		updateDebugPanelVisibility();
+
+		$('a[href=#debug]').click(function(e) {
+			e.preventDefault();
+			localStorage.debug = parseInt(localStorage.debug) ? 0 : 1;
+			updateDebugPanelVisibility();
+		});
+
+		function resizeDebugPanel(e) {
+			localStorage.debugPanelWidth = Math.max(document.body.clientWidth - e.clientX + delta, 300);
+			panel.css('width', localStorage.debugPanelWidth);
+		}
+
+		function removeResizeListener() {
+			$(window)
+				.off('mousemove', resizeDebugPanel)
+				.off('mouseup', removeResizeListener);
+		}
+
+		grippy.mousedown(function(e) {
+			e.preventDefault();
+			jQuery(window)
+				.on('mousemove', resizeDebugPanel)
+				.on('mouseup', removeResizeListener);
+		});
+
+		function updateLogLevel() {
+			var logLevel = $('#log-level-selector').val();
+			localStorage.logLevel = logLevel;
+
+			$('.state-info.log li').each(function() {
+				var messageLogLevel = this.className.match(/log-level-(\d)/);
+				$(this).toggle(!messageLogLevel || messageLogLevel[1] >= logLevel);
+			});
+		}
+
+		$('#log-level-selector')
+			.change(updateLogLevel)
+			.val(localStorage.logLevel || <?=LOG_LEVEL_INFO?>);
+
+		updateLogLevel();
+		</script>
+	</body>
+</html>
