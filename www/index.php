@@ -147,3 +147,5 @@ class WebFrontend
 header('Content-Type: text/html; charset=UTF-8');
 $frontend = new WebFrontend('knowledgebases/planes.xml');
 $frontend->main();
+$frontend = new WebFrontend('knowledgebases/planes.xml');
+$frontend->main();
