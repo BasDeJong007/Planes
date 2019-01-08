@@ -10,7 +10,7 @@ $errors = array();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'
 	&& isset($_FILES['knowledgebase'])
-	&& $file = process_file($_FILES['knowledgebase'], $errors))
+	&& $file = process_file($_FILES['knowledgebase/planes.xml'], $errors))
 {
 	switch ($_POST['action'])
 	{
