@@ -1,0 +1,643 @@
+<?xml version="1.0"?>
+<knowledge>
+	<title>Deciding what glider plane to buy?</title>
+	<description>This knowledge system helps the user to choose what glider plane he or she should buy.</description>
+
+
+		<goal name="plane">
+				<answer value="Schweizer SGS 1-26">Schweizer SGS 1-26</answer>
+				<answer value="Standard Libelle">Standard Libelle</answer>
+				<answer value="ASW 24 WL">ASW 24 WL</answer>
+				<answer value="Ka8b Zwei Hauben">Ka8b Zwei Hauben</answer>
+				<answer value="ASG 32 Mi">ASG 32 Mi</answer>
+				<answer value="ASH25 EB 28 zu">ASH25 EB 28 zu</answer>
+				<answer value="Nimbus 3">Nimbus 3</answer>
+				<answer value="ASW 20">ASW 20</answer>
+				<answer value="ASW 29">ASW 29</answer>
+				<answer value="Kranich II">Kranich II</answer>
+				<answer value="SGS 2-32">SGS 2-32</answer>
+				<answer value="Ventus b">Ventus b</answer>
+				<answer value="Ventus 2ax">Ventus 2ax</answer>
+				<answer value="ASW 15">ASW 15</answer>
+				<answer value="ASK 13">ASK 13</answer>
+				<answer value="Duo Diskus">Duo Diskus</answer>
+				<answer value="L13 Blanik">L13 Blanik</answer>
+				<answer value="Rolladen-Schneider LS8a">Rolladen-Schneider LS8a</answer>
+				<answer value="$undefined">Sorry, we can not find a suitable plane for you based on your preferences.</answer>
+			</goal>
+
+		<question>
+				<description>What is your budget?</description>
+				<option>
+					<description>Less than $30.000</description>
+					<then>
+						<fact name="price">cheap</fact>
+					</then>
+				</option>
+				<option>
+					<description>Between $30.000 and $75.000</description>
+					<then>
+						<fact name="price">medium</fact>
+					</then>
+				</option><option>
+					<description>More than $75.000</description>
+					<then>
+						<fact name="price">expensive</fact>
+					</then>
+				</option>
+		</question>
+		
+		<question>
+				<description>What is the main purpose for your plane?</description>
+				<option>
+					<description>Recreational</description>
+					<then>
+						<fact name="purpose">recreational</fact>
+					</then>
+				</option>
+				<option>
+					<description>Competitive</description>
+					<then>
+						<fact name="purpose">competitive</fact>
+					</then>
+				</option><option>
+					<description>Collective</description>
+					<then>
+						<fact name="purpose">collective</fact>
+					</then>
+				</option>
+		</question>
+		
+		<question>
+				<description>What sort of competitions do you wish to enter with your plane?</description>
+				<option>
+					<description>Club (older planes)</description>
+					<then>
+						<fact name="competition">club</fact>
+					</then>
+				</option>
+				<option>
+					<description>Standard (wing span under fifteen metres and no flaps)</description>
+					<then>
+						<fact name="competition">standard</fact>
+					</then>
+				</option><option>
+					<description>Open (all planes)</description>
+					<then>
+						<fact name="competition">open</fact>
+					</then>
+				</option>
+		</question>
+		
+		<question>
+				<description>Do you want to have the ability to take off without assistance?</description>
+				<option>
+					<description>Yes</description>
+					<then>
+						<fact name="enginelift">yes</fact>
+					</then>
+				</option>
+				<option>
+					<description>No</description>
+					<then>
+						<fact name="enginelift">no</fact>
+					</then>
+				</option>
+		</question>
+
+		<question>
+				<description>What is the skill level of the user?</description>
+				<option>
+					<description>Beginner (less than 3 years experience)</description>
+					<then>
+						<fact name="skill">beginner</fact>
+					</then>
+				</option>
+				<option>
+					<description>Experienced (more than 3 years experience)</description>
+					<then>
+						<fact name="skill">experienced</fact>
+					</then>
+				</option>
+		</question>
+
+		<question>
+				<description>Do you want to have one or two seats in your plane?</description>
+				<option>
+					<description>One</description>
+					<then>
+						<fact name="seats">one</fact>
+					</then>
+				</option>
+				<option>
+					<description>Two</description>
+					<then>
+						<fact name="seats">two</fact>
+					</then>
+				</option>
+		</question>
+		
+		<question>
+				<description>Do you want a an engine to either support a landing and change direction
+							or to lift off?</description>
+				<option>
+					<description>Lift off engine</description>
+					<then>
+						<fact name="engineliftoff">yes</fact>
+					</then>
+				</option>
+				<option>
+					<description>Support engine</description>
+					<then>
+						<fact name="enginesupport">yes</fact>
+					</then>
+				</option>
+				<option>
+					<description>No</description>
+					<then>
+						<fact name="enginesupport">no</fact>
+						<fact name="engineliftoff">no</fact>
+					</then>
+				</option>
+		</question>
+		
+		<question>
+				<description>Do you want to fly long distances (cross-country) or locally (within 50km of airport)?</description>
+				<option>
+					<description>Local</description>
+					<then>
+						<fact name="flaps">no</fact>
+					</then>
+				</option>
+				<option>
+					<description>Long distance</description>
+					<then>
+						<fact name="flaps">yes</fact>
+					</then>
+				</option>
+		</question>
+
+
+						
+		<rule>
+			<description>When flying in standard class, you need to have a wingspan of less than 15 meters and no flaps.</description>
+				<if>
+					<fact name="competition">standard</fact>
+				</if>
+				
+				<then>
+					<fact name="wingspan">lessfifteen</fact>
+					<fact name="flaps">no</fact>
+				</then>
+		</rule>
+
+		<rule>
+			<description>When flying club, you can buy an old plane.</description>
+				<if>
+					<fact name="competition">club</fact>
+				</if>
+				
+				<then>
+					<fact name="age">old</fact>
+				</then>
+		</rule>
+		
+		<rule>
+			<description>Planes for competition have 1 seat.</description>
+				<if>
+					<fact name="purpose">competitive</fact>
+				</if>
+				
+				<then>
+					<fact name="seats">one</fact>
+				</then>
+		</rule>
+		
+		<rule>
+			<description>When you want an experienced recreational plane with
+						two seats, it will cost a lot.</description>
+			<if>
+				<and>
+					<fact name="skill">experienced</fact>
+					<fact name="seats">two</fact>
+				</and>
+			</if>
+			
+			<then>
+				<fact name="price">expensive</fact>
+			</then>
+		</rule>
+		
+		<rule>
+			<if>
+				<fact name="purpose">collective</fact>
+			</if>
+			
+			<then>
+				<fact name="skill">undefined</fact>
+				<fact name="seats">undefined</fact>
+			</then>
+		</rule>
+		
+		<rule>
+			<description>A beginner does not need flaps nor an engine.</description>
+				<if>
+					<fact name="skill">beginner</fact>
+				</if>
+				
+				<then>
+					<fact name="flaps">no</fact>
+					<fact name="enginesupport">no</fact>
+				</then>
+		</rule>
+		
+		<rule>
+			<description>To make sure that the purpose is asked before the competition question.</description>
+				<if>
+					<or>
+						<fact name="purpose">recreational</fact>
+						<fact name="purpose">collective</fact>
+					</or>
+				</if>
+				
+				<then>
+					<fact name="competition">null</fact>
+				</then>
+		</rule>
+		
+		<rule>
+			<description>Recreational planes do not have flaps.</description>
+				<if>
+					<fact name="purpose">recreational</fact>
+				</if>
+				
+				<then>
+					<fact name="flaps">no</fact>
+				</then>
+		</rule>
+		
+		<rule>
+			<description>schweizer sgs 1-26</description>
+				<if>
+					<and>
+					<fact name="price">cheap</fact>
+					<fact name="seats">one</fact>
+					<fact name="purpose">recreational</fact>
+					<fact name="skill">beginner</fact>
+					<fact name="enginesupport">no</fact>
+					<fact name="flaps">no</fact>
+					</and>
+				</if>
+				
+				<then>
+					<fact name="plane">Schweizer SGS 1-26</fact>
+				</then>
+		</rule>
+		
+		<rule>
+			<description>ASW 24 WL</description>
+				<if>
+					<and>
+					<fact name="price">medium</fact>
+					<fact name="seats">one</fact>
+					<fact name="purpose">competitive</fact>
+						<or>
+							<fact name="competition">standard</fact>
+							<fact name="competition">open</fact>		
+						</or>
+					<fact name="skill">beginner</fact>
+					<fact name="enginesupport">no</fact>
+					<fact name="flaps">no</fact>
+					</and>
+				</if>
+				
+				<then>
+					<fact name="plane">ASW 24 WL</fact>
+				</then>
+		</rule>
+		
+		<rule>
+			<description>Ka8b Zwei Hauben</description>
+				<if>
+					<and>
+					<fact name="price">cheap</fact>
+					<fact name="purpose">collective</fact>
+					  
+					</and>
+				</if>
+				
+				<then>
+					<fact name="plane">Ka8b Zwei Hauben</fact>
+				</then>
+		</rule>
+		
+		<rule>
+			<description>SGS 2-32</description>
+				<if>
+					<and>
+					<fact name="price">medium</fact>
+					<fact name="purpose">collective</fact>
+					  
+					</and>
+				</if>
+				
+				<then>
+					<fact name="plane">SGS 2-32</fact>
+				</then>
+		</rule>
+
+		<rule>
+			<description>Kranich II</description>
+				<if>
+					<and>
+					<fact name="price">expensive</fact>
+					<fact name="purpose">collective</fact>
+					  
+					</and>
+				</if>
+				
+				<then>
+					<fact name="plane">Kranich II</fact>
+				</then>
+		</rule>
+
+		<rule>
+			<description>ASG 32 Mi</description>
+				<if>
+					<and>
+					<fact name="price">expensive</fact>
+					<fact name="seats">two</fact>
+					<fact name="purpose">recreational</fact>
+					<fact name="enginesupport">yes</fact>
+					<fact name="flaps">no</fact>
+					<fact name="skill">experienced</fact>
+					</and>
+				</if>
+				
+				<then>
+					<fact name="plane">ASG 32 Mi</fact>
+				</then>
+		</rule>
+		
+		<rule>
+			<description>Standard Libelle</description>
+				<if>
+					<and>
+					<fact name="price">cheap</fact>
+					<fact name="seats">one</fact>
+					<fact name="purpose">competitive</fact>
+					<fact name="enginesupport">no</fact>
+					<fact name="flaps">no</fact>
+					<fact name="skill">beginner</fact>
+						<or>
+							<fact name="competition">club</fact>
+							<fact name="competition">open</fact>		
+						</or>
+					</and>
+				</if>
+				
+				<then>
+					<fact name="plane">Standard Libelle</fact>
+				</then>
+		</rule>
+		
+		<rule>
+			<description>Nimbus 3</description>
+				<if>
+					<and>
+					<fact name="price">medium</fact>
+					<fact name="seats">one</fact>
+					<fact name="purpose">recreational</fact>
+					<fact name="enginesupport">no</fact>
+					<fact name="flaps">no</fact>
+					<fact name="skill">beginner</fact>
+					</and>
+				</if>
+				
+				<then>
+					<fact name="plane">nimbus 3</fact>
+				</then>
+		</rule>
+		
+		<rule>
+			<description>ASH25 EB 28 zu</description>
+				<if>
+					<and>
+					<fact name="price">expensive</fact>
+					<fact name="seats">two</fact>
+					<fact name="purpose">recreational</fact>
+					<fact name="engineliftoff">yes</fact>
+					<fact name="flaps">no</fact>
+					<fact name="skill">experienced</fact>
+					</and>
+				</if>
+				
+				<then>
+					<fact name="plane">ASH25 EB 28 zu</fact>
+				</then>
+		</rule>
+		
+		<rule>
+			<description>ASW 20</description>
+				<if>
+					<and>
+					<fact name="price">cheap</fact>
+					<fact name="seats">one</fact>
+					<fact name="purpose">competitive</fact>
+					<fact name="competition">open</fact>
+					<fact name="engineliftoff">no</fact>
+					<fact name="flaps">yes</fact>
+					<fact name="skill">experienced</fact>
+					</and>
+				</if>
+				
+				<then>
+					<fact name="plane">ASW 20</fact>
+				</then>
+		</rule>
+		
+		<rule>
+			<description>ASW 29</description>
+				<if>
+					<and>
+					<fact name="price">expensive</fact>
+					<fact name="seats">one</fact>
+					<fact name="purpose">competitive</fact>
+					<fact name="competition">open</fact>
+					<fact name="engineliftoff">yes</fact>
+					<fact name="flaps">yes</fact>
+					<fact name="skill">experienced</fact>
+					</and>
+				</if>
+				
+				<then>
+					<fact name="plane">ASW 29</fact>
+				</then>
+		</rule>
+		
+		<rule>
+			<description>Schleicher ASH 31 Mi</description>
+				<if>
+					<and>
+					<fact name="price">expensive</fact>
+					<fact name="seats">one</fact>
+					<fact name="purpose">recreational</fact>
+					<fact name="engineliftoff">yes</fact>
+					<fact name="flaps">no</fact>
+					<or>
+						<fact name="skill">experienced</fact>
+						<fact name="skill">beginner</fact>
+					</or>
+					</and>
+				</if>
+				
+				<then>
+					<fact name="plane">Schleicher ASH 31 Mi</fact>
+				</then>
+		</rule>
+		
+		<rule>
+			<description>Rolladen-Schneider LS8a</description>
+				<if>
+					<and>
+						<or>
+							<fact name="price">medium</fact>
+							<fact name="price">expensive</fact>
+						</or>
+					<fact name="seats">one</fact>
+					<fact name="purpose">recreational</fact>
+					<fact name="engineliftoff">no</fact>
+					<fact name="flaps">no</fact>
+					<or>
+						<fact name="skill">experienced</fact>
+						<fact name="skill">beginner</fact>
+					</or>
+					</and>
+				</if>
+				
+				<then>
+					<fact name="plane">Rolladen-Schneider LS8a</fact>
+				</then>
+		</rule>
+
+		<rule>
+			<description>Ventus b</description>
+				<if>
+					<and>
+					<fact name="price">cheap</fact>
+					<fact name="seats">one</fact>
+					<fact name="purpose">recreational</fact>
+					<fact name="engineliftoff">no</fact>
+					<fact name="flaps">no</fact>
+					<or>
+						<fact name="skill">experienced</fact>
+						<fact name="skill">beginner</fact>
+					</or>
+					</and>
+				</if>
+				
+				<then>
+					<fact name="plane">Ventus b</fact>
+				</then>
+		</rule>
+		
+		<rule>
+			<description>Ventus 2ax</description>
+				<if>
+					<and>
+					<fact name="price">expensive</fact>
+					<fact name="seats">one</fact>
+					<fact name="purpose">competitive</fact>
+						<or>
+							<fact name="competition">standard</fact>
+							<fact name="competition">open</fact>		
+						</or>
+					<fact name="skill">beginner</fact>
+					<fact name="enginesupport">no</fact>
+					<fact name="flaps">no</fact>
+					</and>
+				</if>
+				
+				<then>
+					<fact name="plane">Ventus 2ax</fact>
+				</then>
+		</rule>
+		
+		<rule>
+			<description>ASW 15</description>
+				<if>
+					<and>
+					<fact name="price">cheap</fact>
+					<fact name="seats">one</fact>
+					<fact name="purpose">competitive</fact>
+						<or>
+							<fact name="competition">standard</fact>
+							<fact name="competition">open</fact>		
+						</or>
+					<fact name="skill">beginner</fact>
+					<fact name="enginesupport">no</fact>
+					<fact name="flaps">no</fact>
+					</and>
+				</if>
+				
+				<then>
+					<fact name="plane">ASW 15</fact>
+				</then>
+		</rule>
+		
+		<rule>
+			<description>ASK 13</description>
+				<if>
+					<and>
+					<fact name="price">cheap</fact>
+					<fact name="seats">two</fact>
+					<fact name="purpose">recreational</fact>
+					<fact name="engineliftoff">no</fact>
+					<fact name="flaps">no</fact>
+					<fact name="skill">experienced</fact>
+					</and>
+				</if>
+				
+				<then>
+					<fact name="plane">ASK 13</fact>
+				</then>
+		</rule>
+		
+		<rule>
+			<description>Duo diskus</description>
+				<if>
+					<and>
+					<fact name="price">expensive</fact>
+					<fact name="seats">two</fact>
+					<fact name="purpose">recreational</fact>
+					<fact name="engineliftoff">no</fact>
+					<fact name="flaps">no</fact>
+					<fact name="skill">experienced</fact>
+					</and>
+				</if>
+				
+				<then>
+					<fact name="plane">Duo Diskus</fact>
+				</then>
+		</rule>
+		
+		<rule>
+			<description>L13 Blanik</description>
+				<if>
+					<and>
+					<fact name="price">medium</fact>
+					<fact name="seats">two</fact>
+					<fact name="purpose">recreational</fact>
+					<fact name="engineliftoff">no</fact>
+					<fact name="flaps">no</fact>
+					<fact name="skill">experienced</fact>
+					</and>
+				</if>
+				
+				<then>
+					<fact name="plane">L13 Blanik</fact>
+				</then>
+		</rule>
+		
+</knowledge>
+
