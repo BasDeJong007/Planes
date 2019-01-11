@@ -6,10 +6,7 @@
 	</head>
 	<body id="webfrontend">
 		<nav class="site-nav">
-			<a href="<?=$this->attr($_SERVER['REQUEST_URI'])?>">Start over</a>
-			<a href="analyse.php?kb=<?=rawurlencode($_GET['kb'])?>">Analyse</a>
-			<a href="index.php">Upload</a>
-			<a href="#debug">Debug</a>
+			<a href="<?=$this->attr($_SERVER['REQUEST_URI'])?>">Restart</a>
 		</nav>
 		<header>
 			<h1><?=$this->html($domain->title)?></h1>
