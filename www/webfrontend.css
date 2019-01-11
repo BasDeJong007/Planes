@@ -7,6 +7,8 @@ form {
 body {
 	font: 14px/1.6 "Lucida Grande", Lucida, Verdana, sans-serif;
 	margin-top: 36px;
+	background-image: url("https://fsmedia.imgix.net/c0/1b/5c/94/4154/4abe/b655/817aa8c13689/airbus-perlan-mission-ii-surpasses-u.jpeg");
+ 	background-color: #cccccc;
 }
 
 @media(min-width: 800px) {
