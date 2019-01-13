@@ -17,23 +17,25 @@
 					? $state->substitute_variables($answer->description, ['Template', 'html'])
 					: '<pre>' . $state->facts[$goal->name] . '</pre>';
 				
-				echo $ans;
+				if ($ans = 'Sorry, we can not find a suitable plane for you based on your preferences.'){
+					echo $ans;
+				} else {
+					foreach($xml->children() as $planes) { 
+						$name = $planes->name->__toString();
 
-				foreach($xml->children() as $planes) { 
-					$name = $planes->name->__toString();
-					
-					if (strcmp($ans, $name) == 0) {
-						echo "name     : " . $planes->name    . "<br>";
-						echo "price    : " . $planes->price   . "<br>";
-						echo "seats    : " . $planes->seats   . "<br>";
-						echo "purpose  : " . $planes->purpose . "<br>";
-						echo "niveau   : " . $planes->niveau  . "<br>";
-						echo "flaps    : " . $planes->flaps   . "<br>";
-						echo "year     : " . $planes->year    . "<br>";
-						echo "wingspan: " . $planes->wingspan . "<br>";
-						echo "class   : " . $planes->class    . "<br>";  
-					}
-				} 
+						if (strcmp($ans, $name) == 0) {
+							echo "name     : " . $planes->name    . "<br>";
+							echo "price    : " . $planes->price   . "<br>";
+							echo "seats    : " . $planes->seats   . "<br>";
+							echo "purpose  : " . $planes->purpose . "<br>";
+							echo "niveau   : " . $planes->niveau  . "<br>";
+							echo "flaps    : " . $planes->flaps   . "<br>";
+							echo "year     : " . $planes->year    . "<br>";
+							echo "wingspan: " . $planes->wingspan . "<br>";
+							echo "class   : " . $planes->class    . "<br>";  
+						}
+					} 
+				}
 			?></dd>
 			<?php endif ?>
 	<?php endforeach ?>
