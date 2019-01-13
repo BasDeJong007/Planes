@@ -21,11 +21,13 @@
 				if ($ans == 'Sorry, we can not find a suitable plane for you based on your preferences.'){
 					echo $ans;
 				} else {
-					$ans = preg_replace('/\s/', '', $ans);
+					$count = 0;
+					$sans = preg_replace('/\s/', '', $ans);
 					foreach($xml->children() as $planes) { 
 						$name = preg_replace('/\s/', '', $planes->name->__toString()); 
 
-						if (strcmp($ans, $name) == 0) {
+						if (strcmp($sans, $name) == 0) {
+							$count = 1;
 							if ($planes->name != 'N/A') {echo "name     : " . $planes->name     . "<br>";}
 							if ($planes->price != 'N/A') {echo "price    : " . $planes->price    . "<br>";}
 							if ($planes->seats != 'N/A') {echo "seats    : " . $planes->seats    . "<br>";}
@@ -35,6 +37,9 @@
 							if ($planes->year != 'N/A') {echo "year     : " . $planes->year     . "<br>";}
 							if ($planes->wingspan != 'N/A') {echo "wingspan : " . $planes->wingspan . "<br>";}
 							if ($planes->class != 'N/A') {echo "class    : " . $planes->class    . "<br>";}  
+						}
+						if (count == 0){
+							echo $ans;
 						}
 					} 
 				}
