@@ -64,7 +64,7 @@
 				</option><option>
 					<description>Collective</description>
 					<then>
-						<fact name="purpose">collective</fact>
+						<fact name="purpose">collecting</fact>
 					</then>
 				</option>
 		</question>
@@ -231,7 +231,7 @@
 		
 		<rule>
 			<if>
-				<fact name="purpose">collective</fact>
+				<fact name="purpose">collecting</fact>
 			</if>
 			
 			<then>
@@ -257,7 +257,7 @@
 				<if>
 					<or>
 						<fact name="purpose">recreational</fact>
-						<fact name="purpose">collective</fact>
+						<fact name="purpose">collecting</fact>
 					</or>
 				</if>
 				
@@ -322,7 +322,7 @@
 				<if>
 					<and>
 					<fact name="price">cheap</fact>
-					<fact name="purpose">collective</fact>
+					<fact name="purpose">collecting</fact>
 					  
 					</and>
 				</if>
@@ -337,7 +337,7 @@
 				<if>
 					<and>
 					<fact name="price">medium</fact>
-					<fact name="purpose">collective</fact>
+					<fact name="purpose">collecting</fact>
 					  
 					</and>
 				</if>
@@ -352,7 +352,7 @@
 				<if>
 					<and>
 					<fact name="price">expensive</fact>
-					<fact name="purpose">collective</fact>
+					<fact name="purpose">collecting</fact>
 					  
 					</and>
 				</if>
