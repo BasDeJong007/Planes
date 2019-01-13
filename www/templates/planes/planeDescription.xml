@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<planes>
+<planes>	
 	<plane type="Schweizer SGS 1-26">
 		<id>1</id>
 		<name>Schweizer SGS 1-26</name>
@@ -14,6 +14,7 @@
 		<class>N/A</class>
 		<photo>N/A</photo>
 	</plane>
+	
 	
 	<plane type="Standard Libelle">
 		<id>2</id>
@@ -263,6 +264,21 @@
 		<purpose>recreational</purpose>
 		<niveau>beginner and experienced</niveau>
 		<engine>no</engine>
+		<flaps>no</flaps>
+		<year>N/A</year>
+		<wingspan>N/A</wingspan>
+		<class>N/A</class>
+		<photo>N/A</photo>
+	</plane>
+	
+	<plane type="Schleicher ASH 31 Mi">
+		<id>19</id>
+		<name>Schleicher ASH 31 Mi</name>
+		<price>N/A</price>
+		<seats>1</seats>
+		<purpose>recreational</purpose>
+		<niveau>beginner and experienced</niveau>
+		<engine>lift-off</engine>
 		<flaps>no</flaps>
 		<year>N/A</year>
 		<wingspan>N/A</wingspan>
