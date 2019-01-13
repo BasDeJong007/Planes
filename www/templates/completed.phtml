@@ -16,6 +16,8 @@
 				$ans = $answer 
 					? $state->substitute_variables($answer->description, ['Template', 'html'])
 					: '<pre>' . $state->facts[$goal->name] . '</pre>';
+				
+				echo $ans;
 
 				foreach($xml->children() as $planes) { 
 					$name = $planes->name->__toString();
