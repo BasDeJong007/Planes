@@ -1,274 +1,272 @@
 <?xml version="1.0" encoding="utf-8"?>
-<database>
-	<planes>
-		<row>
-			<id>		1					</id>
-			<name>		Schweizer SGS 1-26	</name>
-			<price>			</price>
-			<seats>		1					</seats>
-			<purpose>	recreational		</purpose>
-			<niveau>	beginner			</niveau>
-			<engine>	no					</engine>
-			<flaps>		no	</flaps>
-			<year>			</year>
-			<wingspan>		</wingspan>
-			<class>			</class>
-			<photo>			</photo>
-		</row>
-		
-		<row>
-			<id>		2					</id>
-			<name>		Standard Libelle	</name>
-			<price>		23.500				</price>
-			<seats>		1					</seats>
-			<purpose>	competition			</purpose>
-			<niveau>	beginner			</niveau>
-			<engine>	no					</engine>
-			<flaps>		no					</flaps>
-			<year>		1974				</year>
-			<wingspan>	15					</wingspan>
-			<class>		club class	</class>
-			<photo>			</photo>
-		</row>
-		
-		<row>
-			<id>		3					</id>
-			<name>		ASW 24 WL			</name>
-			<price>		36.000				</price>
-			<seats>		1					</seats>
-			<purpose>	competition			</purpose>
-			<niveau>	beginner			</niveau>
-			<engine>	no					</engine>
-			<flaps>		no					</flaps>
-			<year>		1988				</year>
-			<wingspan>	15					</wingspan>
-			<class>		standard			</class>
-			<photo>			</photo>
-		</row>
-		
-		<row>
-			<id>		4					</id>
-			<name>		Ka8b Zwei Hauben	</name>
-			<price>		1.950				</price>
-			<seats>		1					</seats>
-			<purpose>	collectors			</purpose>
-			<niveau>	n/a					</niveau>
-			<engine>	no					</engine>
-			<flaps>		no					</flaps>
-			<year>		1974				</year>
-			<wingspan>	15					</wingspan>
-			<class>		club				</class>
-			<photo>			</photo>
-		</row>
-		
-		<row>
-			<id>		5					</id>
-			<name>		ASG 32 Mi			</name>
-			<price>		275.000				</price>
-			<seats>		2					</seats>
-			<purpose>	recreational		</purpose>
-			<niveau>	experienced			</niveau>
-			<engine>	bring home			</engine>
-			<flaps>		no 					</flaps>
-			<year>		2017				</year>
-			<wingspan>	20					</wingspan>
-			<class>		open class			</class>
-			<photo>			</photo>
-		</row>
-		
-		<row>
-			<id>		6					</id>
-			<name>		ASH25 EB 28 zu		</name>
-			<price>		152.000				</price>
-			<seats>		2					</seats>
-			<purpose>	recreational		</purpose>
-			<niveau>	experienced			</niveau>
-			<engine>	starter engine		</engine>
-			<flaps>		no					</flaps>
-			<year>		2007				</year>
-			<wingspan>	28					</wingspan>
-			<class>		open class			</class>
-			<photo>			</photo>
-		</row>
-		
-		<row>
-			<id>		7					</id>
-			<name>		Nimbus 3			</name>
-			<price>		55.000				</price>
-			<seats>		1					</seats>
-			<purpose>	recreational		</purpose>
-			<niveau>	beginner			</niveau>
-			<engine>	no					</engine>
-			<flaps>		no					</flaps>
-			<year>		1981				</year>
-			<wingspan>	22.9				</wingspan>
-			<class>		open class			</class>
-			<photo>			</photo>
-		</row>
-		
-		<row>
-			<id>		8						</id>
-			<name>		ASW 20					</name>
-			<price>		28.000					</price>
-			<seats>		1						</seats>
-			<purpose>	competition				</purpose>
-			<niveau>	experienced				</niveau>
-			<engine>	no						</engine>
-			<flaps>		yes						</flaps>
-			<year>		1980					</year>
-			<wingspan>	17						</wingspan>
-			<class>		open class				</class>
-			<photo>			</photo>
-		</row>
-		
-		<row>
-			<id>		9						</id>
-			<name>		ASW 29					</name>
-			<price>			</price>
-			<seats>		1						</seats>
-			<purpose>	competitive				</purpose>
-			<niveau>	experienced				</niveau>
-			<engine>	liftof engine			</engine>
-			<flaps>		yes	</flaps>
-			<year>			</year>
-			<wingspan>		</wingspan>
-			<class>		open class				</class>
-			<photo>			</photo>
-		</row>
-		
-		<row>
-			<id>		10						</id>
-			<name>		Kranich II				</name>
-			<price>			</price>
-			<seats>			</seats>
-			<purpose>	collectors				</purpose>
-			<niveau>		</niveau>
-			<engine>		</engine>
-			<flaps>			</flaps>
-			<year>			</year>
-			<wingspan>		</wingspan>
-			<class>			</class>
-			<photo>			</photo>
-		</row>
-		
-		<row>
-			<id>		11						</id>
-			<name>		SGS 2-32				</name>
-			<price>			</price>
-			<seats>			</seats>
-			<purpose>	collectors				</purpose>
-			<niveau>		</niveau>
-			<engine>		</engine>
-			<flaps>			</flaps>
-			<year>			</year>
-			<wingspan>		</wingspan>
-			<class>			</class>
-			<photo>			</photo>
-		</row>
-		
-		<row>
-			<id>		12						</id>
-			<name>		Ventus b				</name>
-			<price>			</price>
-			<seats>		1						</seats>
-			<purpose>	recreational			</purpose>
-			<niveau>	beginner and experienced</niveau>
-			<engine>	no						</engine>
-			<flaps>		no						</flaps>
-			<year>			</year>
-			<wingspan>		</wingspan>
-			<class>			</class>
-			<photo>			</photo>
-		</row>
-		
-		<row>
-			<id>		13						</id>
-			<name>		Ventus 2ax				</name>
-			<price>			</price>
-			<seats>		1						</seats>
-			<purpose>	competititve			</purpose>
-			<niveau>	beginner				</niveau>
-			<engine>	no						</engine>
-			<flaps>		no						</flaps>
-			<year>			</year>
-			<wingspan>		</wingspan>
-			<class>		standard and open class	</class>
-			<photo>			</photo>
-		</row>
-		
-		<row>
-			<id>		14						</id>
-			<name>		ASW 15					</name>
-			<price>			</price>
-			<seats>		1						</seats>
-			<purpose>	competitive				</purpose>
-			<niveau>	beginner				</niveau>
-			<engine>	no						</engine>
-			<flaps>		no						</flaps>
-			<year>			</year>
-			<wingspan>		</wingspan>
-			<class>		standard and open class	</class>
-			<photo>			</photo>
-		</row>
-		
-		<row>
-			<id>		15						</id>
-			<name>		ASK 13					</name>
-			<price>			</price>
-			<seats>		2						</seats>
-			<purpose>	recreational			</purpose>
-			<niveau>	experienced				</niveau>
-			<engine>	no						</engine>
-			<flaps>		no						</flaps>
-			<year>			</year>
-			<wingspan>		</wingspan>
-			<class>			</class>
-			<photo>			</photo>
-		</row>
-		
-		<row>
-			<id>		16						</id>
-			<name>		Duo Diskus				</name>
-			<price>			</price>
-			<seats>		2						</seats>
-			<purpose>	recreational			</purpose>
-			<niveau>	experienced				</niveau>
-			<engine>	no						</engine>
-			<flaps>		no						</flaps>
-			<year>			</year>
-			<wingspan>		</wingspan>
-			<class>			</class>
-			<photo>			</photo>
-		</row>
-		
-		<row>
-			<id>		17						</id>
-			<name>		L13 Blanik				</name>
-			<price>			</price>
-			<seats>		2						</seats>
-			<purpose>	recreational			</purpose>
-			<niveau>	experienced				</niveau>
-			<engine>	no						</engine>
-			<flaps>		no						</flaps>
-			<year>			</year>
-			<wingspan>		</wingspan>
-			<class>			</class>
-			<photo>			</photo>
-		</row>
-		
-		<row>
-			<id>		18						</id>
-			<name>		Rolladen-Schneider LS8a	</name>
-			<price>			</price>
-			<seats>		1						</seats>
-			<purpose>	recreational			</purpose>
-			<niveau>	beginner and experienced</niveau>
-			<engine>	no						</engine>
-			<flaps>		no						</flaps>
-			<year>			</year>
-			<wingspan>		</wingspan>
-			<class>			</class>
-			<photo>			</photo>
-		</row>
-	</planes>
-</database>
+<planes>
+	<plane type="Schweizer SGS 1-26">
+		<id>		1					</id>
+		<name>		Schweizer SGS 1-26	</name>
+		<price>			</price>
+		<seats>		1					</seats>
+		<purpose>	recreational		</purpose>
+		<niveau>	beginner			</niveau>
+		<engine>	no					</engine>
+		<flaps>		no	</flaps>
+		<year>			</year>
+		<wingspan>		</wingspan>
+		<class>			</class>
+		<photo>			</photo>
+	</plane>
+	
+	<plane type="Standard Libelle">
+		<id>		2					</id>
+		<name>		Standard Libelle	</name>
+		<price>		23.500				</price>
+		<seats>		1					</seats>
+		<purpose>	competition			</purpose>
+		<niveau>	beginner			</niveau>
+		<engine>	no					</engine>
+		<flaps>		no					</flaps>
+		<year>		1974				</year>
+		<wingspan>	15					</wingspan>
+		<class>		club class	</class>
+		<photo>			</photo>
+	</plane>
+	
+	<plane type="ASW 24 WL">
+		<id>		3					</id>
+		<name>		ASW 24 WL			</name>
+		<price>		36.000				</price>
+		<seats>		1					</seats>
+		<purpose>	competition			</purpose>
+		<niveau>	beginner			</niveau>
+		<engine>	no					</engine>
+		<flaps>		no					</flaps>
+		<year>		1988				</year>
+		<wingspan>	15					</wingspan>
+		<class>		standard			</class>
+		<photo>			</photo>
+	</plane>
+	
+	<plane type="Ka8b Zwei Hauben">
+		<id>		4					</id>
+		<name>		Ka8b Zwei Hauben	</name>
+		<price>		1.950				</price>
+		<seats>		1					</seats>
+		<purpose>	collectors			</purpose>
+		<niveau>	n/a					</niveau>
+		<engine>	no					</engine>
+		<flaps>		no					</flaps>
+		<year>		1974				</year>
+		<wingspan>	15					</wingspan>
+		<class>		club				</class>
+		<photo>			</photo>
+	</plane>
+	
+	<plane type="ASG 32 Mi">
+		<id>		5					</id>
+		<name>		ASG 32 Mi			</name>
+		<price>		275.000				</price>
+		<seats>		2					</seats>
+		<purpose>	recreational		</purpose>
+		<niveau>	experienced			</niveau>
+		<engine>	bring home			</engine>
+		<flaps>		no 					</flaps>
+		<year>		2017				</year>
+		<wingspan>	20					</wingspan>
+		<class>		open class			</class>
+		<photo>			</photo>
+	</plane>
+	
+	<plane type="ASH25 EB 28 zu">
+		<id>		6					</id>
+		<name>		ASH25 EB 28 zu		</name>
+		<price>		152.000				</price>
+		<seats>		2					</seats>
+		<purpose>	recreational		</purpose>
+		<niveau>	experienced			</niveau>
+		<engine>	starter engine		</engine>
+		<flaps>		no					</flaps>
+		<year>		2007				</year>
+		<wingspan>	28					</wingspan>
+		<class>		open class			</class>
+		<photo>			</photo>
+	</plane>
+	
+	<plane type="Nimbus 3">
+		<id>		7					</id>
+		<name>		Nimbus 3			</name>
+		<price>		55.000				</price>
+		<seats>		1					</seats>
+		<purpose>	recreational		</purpose>
+		<niveau>	beginner			</niveau>
+		<engine>	no					</engine>
+		<flaps>		no					</flaps>
+		<year>		1981				</year>
+		<wingspan>	22.9				</wingspan>
+		<class>		open class			</class>
+		<photo>			</photo>
+	</plane>
+	
+	<plane type="ASW 20">
+		<id>		8						</id>
+		<name>		ASW 20					</name>
+		<price>		28.000					</price>
+		<seats>		1						</seats>
+		<purpose>	competition				</purpose>
+		<niveau>	experienced				</niveau>
+		<engine>	no						</engine>
+		<flaps>		yes						</flaps>
+		<year>		1980					</year>
+		<wingspan>	17						</wingspan>
+		<class>		open class				</class>
+		<photo>			</photo>
+	</plane>
+	
+	<plane type="ASW 29">
+		<id>		9						</id>
+		<name>		ASW 29					</name>
+		<price>			</price>
+		<seats>		1						</seats>
+		<purpose>	competitive				</purpose>
+		<niveau>	experienced				</niveau>
+		<engine>	liftof engine			</engine>
+		<flaps>		yes	</flaps>
+		<year>			</year>
+		<wingspan>		</wingspan>
+		<class>		open class				</class>
+		<photo>			</photo>
+	</plane>
+	
+	<plane type="Kranich II">
+		<id>		10						</id>
+		<name>		Kranich II				</name>
+		<price>			</price>
+		<seats>			</seats>
+		<purpose>	collectors				</purpose>
+		<niveau>		</niveau>
+		<engine>		</engine>
+		<flaps>			</flaps>
+		<year>			</year>
+		<wingspan>		</wingspan>
+		<class>			</class>
+		<photo>			</photo>
+	</plane>
+	
+	<plane type="SGS 2-32">
+		<id>		11						</id>
+		<name>		SGS 2-32				</name>
+		<price>			</price>
+		<seats>			</seats>
+		<purpose>	collectors				</purpose>
+		<niveau>		</niveau>
+		<engine>		</engine>
+		<flaps>			</flaps>
+		<year>			</year>
+		<wingspan>		</wingspan>
+		<class>			</class>
+		<photo>			</photo>
+	</plane>
+	
+	<plane type="Ventus b">
+		<id>		12						</id>
+		<name>		Ventus b				</name>
+		<price>			</price>
+		<seats>		1						</seats>
+		<purpose>	recreational			</purpose>
+		<niveau>	beginner and experienced</niveau>
+		<engine>	no						</engine>
+		<flaps>		no						</flaps>
+		<year>			</year>
+		<wingspan>		</wingspan>
+		<class>			</class>
+		<photo>			</photo>
+	</plane>
+	
+	<plane type="Ventus 2ax">
+		<id>		13						</id>
+		<name>		Ventus 2ax				</name>
+		<price>			</price>
+		<seats>		1						</seats>
+		<purpose>	competititve			</purpose>
+		<niveau>	beginner				</niveau>
+		<engine>	no						</engine>
+		<flaps>		no						</flaps>
+		<year>			</year>
+		<wingspan>		</wingspan>
+		<class>		standard and open class	</class>
+		<photo>			</photo>
+	</plane>
+	
+	<plane type="ASW 15">
+		<id>		14						</id>
+		<name>		ASW 15					</name>
+		<price>			</price>
+		<seats>		1						</seats>
+		<purpose>	competitive				</purpose>
+		<niveau>	beginner				</niveau>
+		<engine>	no						</engine>
+		<flaps>		no						</flaps>
+		<year>			</year>
+		<wingspan>		</wingspan>
+		<class>		standard and open class	</class>
+		<photo>			</photo>
+	</plane>
+	
+	<plane type="ASK 13">
+		<id>		15						</id>
+		<name>		ASK 13					</name>
+		<price>			</price>
+		<seats>		2						</seats>
+		<purpose>	recreational			</purpose>
+		<niveau>	experienced				</niveau>
+		<engine>	no						</engine>
+		<flaps>		no						</flaps>
+		<year>			</year>
+		<wingspan>		</wingspan>
+		<class>			</class>
+		<photo>			</photo>
+	</plane>
+	
+	<plane type="Duo Diskus">
+		<id>		16						</id>
+		<name>		Duo Diskus				</name>
+		<price>			</price>
+		<seats>		2						</seats>
+		<purpose>	recreational			</purpose>
+		<niveau>	experienced				</niveau>
+		<engine>	no						</engine>
+		<flaps>		no						</flaps>
+		<year>			</year>
+		<wingspan>		</wingspan>
+		<class>			</class>
+		<photo>			</photo>
+	</plane>
+	
+	<plane type="L13 Blanik">
+		<id>		17						</id>
+		<name>		L13 Blanik				</name>
+		<price>			</price>
+		<seats>		2						</seats>
+		<purpose>	recreational			</purpose>
+		<niveau>	experienced				</niveau>
+		<engine>	no						</engine>
+		<flaps>		no						</flaps>
+		<year>			</year>
+		<wingspan>		</wingspan>
+		<class>			</class>
+		<photo>			</photo>
+	</plane>
+	
+	<plane type="Rolladen-Schneider LS8a">
+		<id>		18						</id>
+		<name>		Rolladen-Schneider LS8a	</name>
+		<price>			</price>
+		<seats>		1						</seats>
+		<purpose>	recreational			</purpose>
+		<niveau>	beginner and experienced</niveau>
+		<engine>	no						</engine>
+		<flaps>		no						</flaps>
+		<year>			</year>
+		<wingspan>		</wingspan>
+		<class>			</class>
+		<photo>			</photo>
+	</plane>
+</planes>
