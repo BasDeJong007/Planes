@@ -19,7 +19,7 @@
 				
 				foreach($xml->children() as $books) { 
 					echo $books->name . "<br>"; 
-					if (strcmp($ans, $books->name) == 0) {
+					if (strcmp($ans, (string)($books->name)) == 0) {
 						echo $books->name . ", "; 
 				    		echo $books->price . ", "; 
 						echo $books->seats . ", ";
