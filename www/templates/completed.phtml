@@ -18,7 +18,7 @@
 					: '<pre>' . $state->facts[$goal->name] . '</pre>';
 				
 				foreach($xml->children() as $books) { 
-					if ($ans == $books->name) {
+					if (strcmp($ans, $books->name) == 0) {
 						echo $books->name . ", "; 
 				    		echo $books->price . ", "; 
 						echo $books->seats . ", ";
