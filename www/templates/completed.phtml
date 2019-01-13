@@ -2,6 +2,8 @@
 
 <?php $this->begin('content') ?>
 <section class="completed">
+	<?php $xml = simplexml_load_file('planes/planeDescription.xml');
+	?>
 	<h2>The plane for you is ....</h2>
 	<dl>
 	<?php foreach ($domain->goals as $goal): ?>
