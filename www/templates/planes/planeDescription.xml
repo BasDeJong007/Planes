@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <planes>
 	<plane type="Schweizer SGS 1-26">
-		<id>		1					</id>
-		<name>		Schweizer SGS 1-26	</name>
+		<id>1</id>
+		<name>Schweizer SGS 1-26</name>
 		<price>			</price>
-		<seats>		1					</seats>
+		<seats>		1			</seats>
 		<purpose>	recreational		</purpose>
-		<niveau>	beginner			</niveau>
-		<engine>	no					</engine>
+		<niveau>	beginner		</niveau>
+		<engine>	no			</engine>
 		<flaps>		no	</flaps>
 		<year>			</year>
 		<wingspan>		</wingspan>
