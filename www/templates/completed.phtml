@@ -17,9 +17,15 @@
 					? $state->substitute_variables($answer->description, ['Template', 'html'])
 					: '<pre>' . $state->facts[$goal->name] . '</pre>';
 				
+				$ans = (string) $ans;
+
 				foreach($xml->children() as $planes) { 
-					echo $planes->name . "<br>"; 
-					if (strcmp((string)$ans, (string)$planes->name) == 0) {
+					$name = (string) $planes->name;
+					
+					echo $ans . " == " . $name . "<br>";
+
+
+					if (strcmp($ans, $name) == 0) {
 						echo $planes->name . ", "; 
 				    		echo $planes->price . ", "; 
 						echo $planes->seats . ", ";
