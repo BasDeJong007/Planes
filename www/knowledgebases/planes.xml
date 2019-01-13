@@ -23,6 +23,7 @@
 				<answer value="Duo Diskus">Duo Diskus</answer>
 				<answer value="L13 Blanik">L13 Blanik</answer>
 				<answer value="Rolladen-Schneider LS8a">Rolladen-Schneider LS8a</answer>
+				<answer value="Schleicher ASH 31 Mi">Schleicher ASH 31 Mi</answer>
 				<answer value="$undefined">Sorry, we can not find a suitable plane for you based on your preferences.</answer>
 			</goal>
 
