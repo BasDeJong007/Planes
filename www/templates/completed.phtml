@@ -14,6 +14,7 @@
 		<?php if ($goal->hasAnswers() && (($answer = $goal->answer($state)) || $state->facts[$goal->name] != STATE_UNDEFINED)): ?>
 			<dt><?=$state->substitute_variables($goal->description, ['Template', 'html'])?></dt>
 			<dd><?php
+				$count = 0;
 				$ans = $answer 
 					? $state->substitute_variables($answer->description, ['Template', 'html'])
 					: '<pre>' . $state->facts[$goal->name] . '</pre>';
@@ -21,7 +22,6 @@
 				if ($ans == 'Sorry, we can not find a suitable plane for you based on your preferences.'){
 					echo $ans;
 				} else {
-					$count = 0;
 					$sans = preg_replace('/\s/', '', $ans);
 					foreach($xml->children() as $planes) { 
 						$name = preg_replace('/\s/', '', $planes->name->__toString()); 
