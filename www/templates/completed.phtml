@@ -18,7 +18,7 @@
 					: '<pre>' . $state->facts[$goal->name] . '</pre>';
 
 				foreach($xml->children() as $planes) { 
-					$name = strval($planes->name);
+					$name = $planes->name->__toString();
 					
 					echo $ans . " == " . $name . "<br>";
 
