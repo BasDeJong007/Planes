@@ -10,11 +10,11 @@
 	</dd>
 	<h2>The plane for you is ....</h2>
 	<dl>
-	<?php foreach ($domain->goals as $goal): ?>
+	<?php 	$count = 0;
+		foreach ($domain->goals as $goal): ?>
 		<?php if ($goal->hasAnswers() && (($answer = $goal->answer($state)) || $state->facts[$goal->name] != STATE_UNDEFINED)): ?>
 			<dt><?=$state->substitute_variables($goal->description, ['Template', 'html'])?></dt>
 			<dd><?php
-				$count = 0;
 				$ans = $answer 
 					? $state->substitute_variables($answer->description, ['Template', 'html'])
 					: '<pre>' . $state->facts[$goal->name] . '</pre>';
