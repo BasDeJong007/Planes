@@ -11,7 +11,7 @@
 				$ans = $answer 
 					? $state->substitute_variables($answer->description, ['Template', 'html'])
 					: '<pre>' . $state->facts[$goal->name] . '</pre>';
-				echo $ans;
+				echo $ans == 'Schweizer SGS 1-26' ? 'hello' : 'jammer';
 			?></dd>
 			<?php endif ?>
 	<?php endforeach ?>
