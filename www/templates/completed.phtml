@@ -2,8 +2,14 @@
 
 <?php $this->begin('content') ?>
 <section class="completed">
-	<dd> <?php $xml = simplexml_load_file('templates/planes/planeDescription.xml');
-	print_r($xml);
+	<dd> <?
+		php $xml = simplexml_load_file('templates/planes/planeDescription.xml');
+		foreach($xml->children() as $books) { 
+		    echo $books->title . ", "; 
+		    echo $books->author . ", "; 
+		    echo $books->year . ", ";
+		    echo $books->price . "<br>"; 
+		} 
 	?>
 	</dd>
 	<h2>The plane for you is ....</h2>
