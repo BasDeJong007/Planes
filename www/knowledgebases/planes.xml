@@ -415,7 +415,7 @@
 				</if>
 				
 				<then>
-					<fact name="plane">nimbus 3</fact>
+					<fact name="plane">Nimbus 3</fact>
 				</then>
 		</rule>
 		
