@@ -2,10 +2,15 @@
 
 <?php $this->begin('content') ?>
 <section class="completed">
+	<aside id="debug-info">
+		<h3>Facts</h3>
+	</aside>
+	
+	
 	<dd> <?php 
-		$xml = simplexml_load_file('templates/planes/planeDescription.xml') or die("Error: Cannot create object");
-		
+		$xml = simplexml_load_file('templates/planes/planeDescription.xml') or die("Error: Cannot create object");	
 	?>
+		
 	</dd>
 	<h2>The plane for you is ....</h2>
 	<dl>
