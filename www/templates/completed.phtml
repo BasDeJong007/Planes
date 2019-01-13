@@ -2,9 +2,10 @@
 
 <?php $this->begin('content') ?>
 <section class="completed">
-	<?php $xml = simplexml_load_file('templates/planes/planeDescription.xml');
+	<dd> <?php $xml = simplexml_load_file('templates/planes/planeDescription.xml');
 	echo $xml -> id;
 	?>
+	</dd>
 	<h2>The plane for you is ....</h2>
 	<dl>
 	<?php foreach ($domain->goals as $goal): ?>
