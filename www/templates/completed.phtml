@@ -17,13 +17,13 @@
 					? $state->substitute_variables($answer->description, ['Template', 'html'])
 					: '<pre>' . $state->facts[$goal->name] . '</pre>';
 				
-				foreach($xml->children() as $books) { 
-					echo $books->name . "<br>"; 
-					if (strcmp($ans, (string)($books->name)) == 0) {
-						echo $books->name . ", "; 
-				    		echo $books->price . ", "; 
-						echo $books->seats . ", ";
-						echo $books->engine . "<br>"; 
+				foreach($xml->children() as $planes) { 
+					echo $planes->name . "<br>"; 
+					if (strcmp((string)$ans, (string)$planes->name) == 0) {
+						echo $planes->name . ", "; 
+				    		echo $planes->price . ", "; 
+						echo $planes->seats . ", ";
+						echo $planes->engine . "<br>"; 
 					}
 				} 
 			?></dd>
