@@ -25,15 +25,15 @@
 						$name = $planes->name->__toString();
 
 						if (strcmp($ans, $name) == 0) {
-							echo "name     : " . $planes->name    . "<br>";
-							echo "price    : " . $planes->price   . "<br>";
-							echo "seats    : " . $planes->seats   . "<br>";
-							echo "purpose  : " . $planes->purpose . "<br>";
-							echo "niveau   : " . $planes->niveau  . "<br>";
-							echo "flaps    : " . $planes->flaps   . "<br>";
-							echo "year     : " . $planes->year    . "<br>";
-							echo "wingspan: " . $planes->wingspan . "<br>";
-							echo "class   : " . $planes->class    . "<br>";  
+							if ($planes->name != 'N/A') {echo "name     : " . $planes->name     . "<br>";}
+							if ($planes->name != 'N/A') {echo "price    : " . $planes->price    . "<br>";}
+							if ($planes->name != 'N/A') {echo "seats    : " . $planes->seats    . "<br>";}
+							if ($planes->name != 'N/A') {echo "purpose  : " . $planes->purpose  . "<br>";}
+							if ($planes->name != 'N/A') {echo "niveau   : " . $planes->niveau   . "<br>";}
+							if ($planes->name != 'N/A') {echo "flaps    : " . $planes->flaps    . "<br>";}
+							if ($planes->name != 'N/A') {echo "year     : " . $planes->year     . "<br>";}
+							if ($planes->name != 'N/A') {echo "wingspan : " . $planes->wingspan . "<br>";}
+							if ($planes->name != 'N/A') {echo "class    : " . $planes->class    . "<br>";}  
 						}
 					} 
 				}
