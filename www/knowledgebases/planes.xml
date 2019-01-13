@@ -62,7 +62,7 @@
 						<fact name="purpose">competitive</fact>
 					</then>
 				</option><option>
-					<description>Collective</description>
+					<description>Collecting</description>
 					<then>
 						<fact name="purpose">collecting</fact>
 					</then>
