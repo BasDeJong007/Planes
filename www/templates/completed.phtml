@@ -20,11 +20,16 @@
 				foreach($xml->children() as $planes) { 
 					$name = $planes->name->__toString();
 					
-					echo $ans . " == " . $name . "<br>";
-
-
 					if (strcmp($ans, $name) == 0) {
-						echo "------------this one";
+						echo "name     : " . $planes->name    . "<br>";
+						echo "price    : " . $planes->price   . "<br>";
+						echo "seats    : " . $planes->seats   . "<br>";
+						echo "purpose  : " . $planes->purpose . "<br>";
+						echo "niveau   : " . $planes->niveau  . "<br>";
+						echo "flaps    : " . $planes->flaps   . "<br>";
+						echo "year     : " . $planes->year    . "<br>";
+						echo "wingspan: " . $planes->wingspan . "<br>";
+						echo "class   : " . $planes->class    . "<br>";  
 					}
 				} 
 			?></dd>
