@@ -17,7 +17,7 @@
 					? $state->substitute_variables($answer->description, ['Template', 'html'])
 					: '<pre>' . $state->facts[$goal->name] . '</pre>';
 				
-				if ($ans = 'Sorry, we can not find a suitable plane for you based on your preferences.'){
+				if ($ans == 'Sorry, we can not find a suitable plane for you based on your preferences.'){
 					echo $ans;
 				} else {
 					foreach($xml->children() as $planes) { 
