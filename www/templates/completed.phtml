@@ -21,8 +21,9 @@
 				if ($ans == 'Sorry, we can not find a suitable plane for you based on your preferences.'){
 					echo $ans;
 				} else {
+					$ans = preg_replace('/\s/', '', $ans);
 					foreach($xml->children() as $planes) { 
-						$name = $planes->name->__toString();
+						$name = preg_replace('/\s/', '', $planes->name->__toString()); 
 
 						if (strcmp($ans, $name) == 0) {
 							if ($planes->name != 'N/A') {echo "name     : " . $planes->name     . "<br>";}
