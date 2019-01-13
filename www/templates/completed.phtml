@@ -4,12 +4,7 @@
 <section class="completed">
 	<dd> <?php 
 		$xml = simplexml_load_file('templates/planes/planeDescription.xml') or die("Error: Cannot create object");
-		foreach($xml->children() as $books) { 
-		    echo $books->name . ", "; 
-		    echo $books->price . ", "; 
-		    echo $books->seats . ", ";
-		    echo $books->engine . "<br>"; 
-		} 
+		
 	?>
 	</dd>
 	<h2>The plane for you is ....</h2>
@@ -21,7 +16,15 @@
 				$ans = $answer 
 					? $state->substitute_variables($answer->description, ['Template', 'html'])
 					: '<pre>' . $state->facts[$goal->name] . '</pre>';
-				echo $ans == 'Schweizer SGS 1-26' ? 'hello' : 'jammer';
+				
+				foreach($xml->children() as $books) { 
+					if ($ans == $books->name) {
+						echo $books->name . ", "; 
+				    		echo $books->price . ", "; 
+						echo $books->seats . ", ";
+						echo $books->engine . "<br>"; 
+					}
+				} 
 			?></dd>
 			<?php endif ?>
 	<?php endforeach ?>
