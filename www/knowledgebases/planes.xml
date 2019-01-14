@@ -528,6 +528,7 @@
 					<fact name="seats">one</fact>
 					<fact name="purpose">recreational</fact>
 					<fact name="engineliftoff">no</fact>
+					<fact name="enginesupport">yes</fact>
 					<fact name="flaps">no</fact>
 					<or>
 						<fact name="skill">experienced</fact>
