@@ -24,6 +24,7 @@
 				<answer value="L13 Blanik">L13 Blanik</answer>
 				<answer value="Rolladen-Schneider LS8a">Rolladen-Schneider LS8a</answer>
 				<answer value="Schleicher ASH 31 Mi">Schleicher ASH 31 Mi</answer>
+				<answer value="twobegin">Two seater planes can only be operated by experienced pilots, either come back when you have some more experience or choose a one-seater plane.</answer>
 				<answer value="$undefined">Sorry, we can not find a suitable plane for you based on your preferences.</answer>
 			</goal>
 
@@ -353,12 +354,25 @@
 					<and>
 					<fact name="price">expensive</fact>
 					<fact name="purpose">collecting</fact>
-					  
 					</and>
 				</if>
 				
 				<then>
 					<fact name="plane">Kranich II</fact>
+				</then>
+		</rule>
+	
+		<rule>
+			<description>Two seaters are only for beginners</description>
+				<if>
+					<and>
+					<fact name="skill">beginner</fact>
+					<fact name="seats">two</fact>
+					</and>
+				</if>
+				
+				<then>
+					<fact name="plane">twobegin</fact>
 				</then>
 		</rule>
 
