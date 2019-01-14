@@ -36,7 +36,10 @@
 							if ($planes->flaps != 'N/A') {echo "flaps    : " . $planes->flaps    . "<br>";}
 							if ($planes->year != 'N/A') {echo "year     : " . $planes->year     . "<br>";}
 							if ($planes->wingspan != 'N/A') {echo "wingspan : " . $planes->wingspan . "<br>";}
-							if ($planes->class != 'N/A') {echo "class    : " . $planes->class    . "<br>";}  
+							if ($planes->class != 'N/A') {echo "class    : " . $planes->class    . "<br>";}
+							if ($planes->photo != 'N/A'){ ?>
+							<img src="<?php echo $planes->photo; ?>" />
+							<?php }
 						}
 					}
 					if ($found == 'no'){echo $ans;}
