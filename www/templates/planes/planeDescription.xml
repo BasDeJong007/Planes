@@ -3,14 +3,14 @@
 	<plane type="Schweizer SGS 1-26">
 		<id>1</id>
 		<name>Schweizer SGS 1-26</name>
-		<price>N/A</price>
+		<price>9000</price>
 		<seats>1</seats>
 		<purpose>recreational</purpose>
 		<niveau>beginner</niveau>
 		<engine>no</engine>
 		<flaps>no</flaps>
-		<year>N/A</year>
-		<wingspan>N/A</wingspan>
+		<year>1954</year>
+		<wingspan>12.2</wingspan>
 		<class>N/A</class>
 		<photo>https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/C-FPPMairborne.jpg/600px-C-FPPMairborne.jpg</photo>
 	</plane>
@@ -28,7 +28,7 @@
 		<year>1974</year>
 		<wingspan>15</wingspan>
 		<class>club class</class>
-		<photo>N/A</photo>
+		<photo>https://upload.wikimedia.org/wikipedia/commons/0/09/Std_Libelle_H201B.JPG</photo>
 	</plane>
 	
 	<plane type="ASW 24 WL">
@@ -43,7 +43,7 @@
 		<year>1988</year>
 		<wingspan>15</wingspan>
 		<class>standard</class>
-		<photo>N/A</photo>
+		<photo>https://en.wikipedia.org/wiki/Schleicher_ASW_24#/media/File:ASW-24,_OK-7724,_SM.jpg</photo>
 	</plane>
 	
 	<plane type="Ka8b Zwei Hauben">
@@ -58,7 +58,7 @@
 		<year>1974</year>
 		<wingspan>15</wingspan>
 		<class>club</class>
-		<photo>N/A</photo>
+		<photo>https://andysandyblog.files.wordpress.com/2013/08/img_4644.jpg</photo>
 	</plane>
 	
 	<plane type="ASG 32 Mi">
@@ -73,7 +73,7 @@
 		<year>2017</year>
 		<wingspan>20</wingspan>
 		<class>open class</class>
-		<photo>N/A</photo>
+		<photo>https://en.wikipedia.org/wiki/Schleicher_ASG_32#/media/File:ASG32Mi_Eigenstart.jpg</photo>
 	</plane>
 	
 	<plane type="ASH25 EB 28 zu">
@@ -88,7 +88,7 @@
 		<year>2007</year>
 		<wingspan>28</wingspan>
 		<class>open class</class>
-		<photo>N/A</photo>
+		<photo>https://www.alexander-schleicher.de/wp-content/uploads/2016/05/F-GAL-259-006.jpg</photo>
 	</plane>
 	
 	<plane type="Nimbus 3">
@@ -103,7 +103,7 @@
 		<year>1981</year>
 		<wingspan>22.9</wingspan>
 		<class>open class</class>
-		<photo>N/A</photo>
+		<photo>https://en.wikipedia.org/wiki/Schempp-Hirth_Nimbus-3#/media/File:G-CFZO_(28213358498).jpg</photo>
 	</plane>
 	
 	<plane type="ASW 20">
@@ -115,174 +115,174 @@
 		<niveau>experienced</niveau>
 		<engine>no</engine>
 		<flaps>yes</flaps>
-		<year>1980</year>
-		<wingspan>17</wingspan>
+		<year>1977</year>
+		<wingspan>15</wingspan>
 		<class>open class</class>
-		<photo>N/A</photo>
+		<photo>https://en.wikipedia.org/wiki/Schleicher_ASW_20#/media/File:ASW20-HDL.jpg</photo>
 	</plane>
 	
 	<plane type="ASW 29">
 		<id>9</id>
-		<name>ASW 29</name>
-		<price>N/A</price>
+		<name>ASG 29</name>
+		<price>87.900</price>
 		<seats>1</seats>
 		<purpose>competitive</purpose>
 		<niveau>experienced</niveau>
 		<engine>liftof engine</engine>
 		<flaps>yes</flaps>
-		<year>N/A</year>
-		<wingspan>N/A</wingspan>
+		<year>2005</year>
+		<wingspan>18</wingspan>
 		<class>open class</class>
-		<photo>N/A</photo>
+		<photo>https://en.wikipedia.org/wiki/Schleicher_ASG_29#/media/File:Alexander_Schleicher_ASG_29.JPG</photo>
 	</plane>
 	
 	<plane type="Kranich II">
 		<id>10</id>
 		<name>Kranich II</name>
-		<price>N/A</price>
-		<seats>N/A</seats>
+		<price>More than 75.000</price>
+		<seats>2</seats>
 		<purpose>collectors</purpose>
 		<niveau>N/A</niveau>
 		<engine>N/A</engine>
-		<flaps>N/A</flaps>
-		<year>N/A</year>
-		<wingspan>N/A</wingspan>
+		<flaps>no</flaps>
+		<year>1938</year>
+		<wingspan>18</wingspan>
 		<class>N/A</class>
-		<photo>N/A</photo>
+		<photo>https://en.wikipedia.org/wiki/DFS_Kranich#/media/File:DFS_Kranich_II-B1_HB-475_OTT_2013_04.jpg</photo>
 	</plane>
 	
 	<plane type="SGS 2-32">
 		<id>11</id>
 		<name>SGS 2-32</name>
-		<price>N/A</price>
-		<seats>N/A</seats>
+		<price>Between 30.000 and 75.000</price>
+		<seats>1</seats>
 		<purpose>collectors</purpose>
 		<niveau>N/A</niveau>
 		<engine>N/A</engine>
 		<flaps>N/A</flaps>
-		<year>N/A</year>
-		<wingspan>N/A</wingspan>
+		<year>1962</year>
+		<wingspan>17.37</wingspan>
 		<class>N/A</class>
-		<photo>N/A</photo>
+		<photo>https://en.wikipedia.org/wiki/Schweizer_SGS_2-32#/media/File:Schweizer2-32-01.JPG</photo>
 	</plane>
 	
 	<plane type="Ventus b">
 		<id>12</id>
 		<name>Ventus b</name>
-		<price>N/A</price>
+		<price>Less than 30.000</price>
 		<seats>1</seats>
 		<purpose>recreational</purpose>
 		<niveau>beginner and experienced</niveau>
 		<engine>no</engine>
 		<flaps>no</flaps>
-		<year>N/A</year>
-		<wingspan>N/A</wingspan>
+		<year>1980</year>
+		<wingspan>15</wingspan>
 		<class>N/A</class>
-		<photo>N/A</photo>
+		<photo>https://en.wikipedia.org/wiki/Schempp-Hirth_Ventus#/media/File:PZL_Bielsko_Glider,_Air_Show_Bielsko-Bia%C5%82a_(2009).JPG</photo>
 	</plane>
 	
 	<plane type="Ventus 2ax">
 		<id>13</id>
 		<name>Ventus 2ax</name>
-		<price>N/A</price>
+		<price>More than 75.000</price>
 		<seats>1</seats>
 		<purpose>competititve</purpose>
 		<niveau>beginner</niveau>
 		<engine>no</engine>
 		<flaps>no</flaps>
-		<year>N/A</year>
-		<wingspan>N/A</wingspan>
+		<year>1994</year>
+		<wingspan>15</wingspan>
 		<class>standard and open class</class>
-		<photo>N/A</photo>
+		<photo>https://en.wikipedia.org/wiki/Schempp-Hirth_Ventus-2#/media/File:Schempp-Hirth_Ventus_2b_glider_being_launched_at_Lasham_Airfield_in_UK.jpg</photo>
 	</plane>
 	
 	<plane type="ASW 15">
 		<id>14</id>
 		<name>ASW 15</name>
-		<price>N/A</price>
+		<price>Less than 30.000</price>
 		<seats>1</seats>
 		<purpose>competitive</purpose>
 		<niveau>beginner</niveau>
 		<engine>no</engine>
 		<flaps>no</flaps>
-		<year>N/A</year>
-		<wingspan>N/A</wingspan>
+		<year>1968</year>
+		<wingspan>15</wingspan>
 		<class>standard and open class</class>
-		<photo>N/A</photo>
+		<photo>https://en.wikipedia.org/wiki/Schleicher_ASW_15#/media/File:ASW15-JJX.jpg</photo>
 	</plane>
 	
 	<plane type="ASK 13">
 		<id>15</id>
 		<name>ASK 13</name>
-		<price>N/A</price>
+		<price>Less than 30.000</price>
 		<seats>2</seats>
 		<purpose>recreational</purpose>
 		<niveau>experienced</niveau>
 		<engine>no</engine>
 		<flaps>	no</flaps>
-		<year>N/A</year>
-		<wingspan>N/A</wingspan>
+		<year>1966</year>
+		<wingspan>16</wingspan>
 		<class>N/A</class>
-		<photo>N/A</photo>
+		<photo>https://en.wikipedia.org/wiki/Schleicher_ASK_13#/media/File:Schleicher_ASK13.jpg</photo>
 	</plane>
 	
 	<plane type="Duo Diskus">
 		<id>16</id>
-		<name>Duo Diskus</name>
-		<price>N/A</price>
+		<name>Duo Discus</name>
+		<price>More than 75.000</price>
 		<seats>2</seats>
 		<purpose>recreational</purpose>
 		<niveau>experienced</niveau>
 		<engine>no</engine>
 		<flaps>no</flaps>
-		<year>N/A</year>
-		<wingspan>N/A</wingspan>
+		<year>1993</year>
+		<wingspan>20</wingspan>
 		<class>N/A</class>
-		<photo>N/A</photo>
+		<photo>https://en.wikipedia.org/wiki/Schempp-Hirth_Duo_Discus#/media/File:Schempp-Hirth_DuoDiscus.jpg</photo>
 	</plane>
 	
 	<plane type="L13 Blanik">
 		<id>17</id>
 		<name>L13 Blanik</name>
-		<price>N/A</price>
+		<price>Between 30.000 and 75.000</price>
 		<seats>2</seats>
 		<purpose>recreational</purpose>
 		<niveau>experienced</niveau>
 		<engine>no</engine>
 		<flaps>no</flaps>
-		<year>N/A</year>
-		<wingspan>N/A</wingspan>
+		<year>1956</year>
+		<wingspan>16.2</wingspan>
 		<class>N/A</class>
-		<photo>N/A</photo>
+		<photo>https://upload.wikimedia.org/wikipedia/en/0/04/PSU_Blanik.JPG</photo>
 	</plane>
 	
 	<plane type="Rolladen-Schneider LS8a">
 		<id>18</id>
 		<name>Rolladen-Schneider LS8a</name>
-		<price>N/A</price>
+		<price>More than 30.000</price>
 		<seats>1</seats>
 		<purpose>recreational</purpose>
 		<niveau>beginner and experienced</niveau>
-		<engine>no</engine>
+		<engine>support engine</engine>
 		<flaps>no</flaps>
-		<year>N/A</year>
+		<year>1994</year>
 		<wingspan>N/A</wingspan>
 		<class>N/A</class>
-		<photo>N/A</photo>
+		<photo>https://en.wikipedia.org/wiki/Rolladen-Schneider_LS8#/media/File:LS8a.jpg</photo>
 	</plane>
 	
 	<plane type="Schleicher ASH 31 Mi">
 		<id>19</id>
 		<name>Schleicher ASH 31 Mi</name>
-		<price>N/A</price>
+		<price>200.475</price>
 		<seats>1</seats>
 		<purpose>recreational</purpose>
 		<niveau>beginner and experienced</niveau>
 		<engine>lift-off</engine>
 		<flaps>no</flaps>
-		<year>N/A</year>
-		<wingspan>N/A</wingspan>
+		<year>2009</year>
+		<wingspan>21</wingspan>
 		<class>N/A</class>
-		<photo>N/A</photo>
+		<photo>https://en.wikipedia.org/wiki/Schleicher_ASH_31#/media/File:ASH_31_Mi_Flug_003_20090421.JPG</photo>
 	</plane>
 </planes>
