@@ -146,12 +146,14 @@
 					<description>Lift off engine</description>
 					<then>
 						<fact name="engineliftoff">yes</fact>
+						<fact name="enginesupport">yes</fact>
 					</then>
 				</option>
 				<option>
 					<description>Support engine</description>
 					<then>
 						<fact name="enginesupport">yes</fact>
+						<fact name="engineliftoff">no</fact>
 					</then>
 				</option>
 				<option>
