@@ -398,7 +398,11 @@
 			<description>Standard Libelle</description>
 				<if>
 					<and>
-					<fact name="price">cheap</fact>
+						<or>
+							<fact name="price">cheap</fact>
+							<fact name="price">medium</fact>
+							<fact name="price">expensive</fact>
+						</or>
 					<fact name="seats">one</fact>
 					<fact name="purpose">competitive</fact>
 					<fact name="enginesupport">no</fact>
