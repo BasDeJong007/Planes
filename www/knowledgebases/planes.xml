@@ -25,6 +25,7 @@
 				<answer value="Rolladen-Schneider LS8a">Rolladen-Schneider LS8a</answer>
 				<answer value="Schleicher ASH 31 Mi">Schleicher ASH 31 Mi</answer>
 				<answer value="twobegin">Two seater planes can only be operated by experienced pilots, either come back when you have some more experience or choose a one-seater plane.</answer>
+				<answer value="missingEngine">All planes with your preferences have either lift off or support engines.</answer>
 				<answer value="$undefined">Sorry, we can not find a suitable plane for you based on your preferences.</answer>
 			</goal>
 
@@ -539,6 +540,31 @@
 				
 				<then>
 					<fact name="plane">Rolladen-Schneider LS8a</fact>
+				</then>
+		</rule>
+	
+		<rule>
+			<description>Cant find because of engine</description>
+				<if>
+					<and>
+						<or>
+							<fact name="price">medium</fact>
+							<fact name="price">expensive</fact>
+						</or>
+					<fact name="seats">one</fact>
+					<fact name="purpose">recreational</fact>
+					<fact name="engineliftoff">no</fact>
+					<fact name="enginesupport">no</fact>
+					<fact name="flaps">no</fact>
+					<or>
+						<fact name="skill">experienced</fact>
+						<fact name="skill">beginner</fact>
+					</or>
+					</and>
+				</if>
+				
+				<then>
+					<fact name="plane">missingEngine</fact>
 				</then>
 		</rule>
 
